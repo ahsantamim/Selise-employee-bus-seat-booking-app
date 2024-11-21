@@ -2,6 +2,9 @@
 
 Selise Transport is a bus booking management app that allows users to view available seats for buses, book seats, and provides an admin panel to manage bus bookings. The app provides a user-friendly interface for booking seats and an admin dashboard for monitoring and managing bookings.
 
+##url
+https://selise-transport-app.netlify.app/
+
 ## Features
 
 - **User Booking**: Users can select buses, view available seats, and book seats.
