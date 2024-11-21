@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# Selise Transport App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Selise Transport is a bus booking management app that allows users to view available seats for buses, book seats, and provides an admin panel to manage bus bookings. The app provides a user-friendly interface for booking seats and an admin dashboard for monitoring and managing bookings.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Booking**: Users can select buses, view available seats, and book seats.
+- **Admin Panel**: Admins can view booked seats for a specific bus and manage bookings.
+- **Seat Layout**: Displays the available and booked seats with a visual representation.
+- **Toast Notifications**: Provides notifications for actions such as booking and seat selection.
+- **Dynamic Routing**: Allows navigation between the User Booking page and the Admin Panel using React Router.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: JavaScript library for building the user interface.
+- **React Router**: Routing library to manage navigation in the app.
+- **React Icons**: Used for adding icons like bus and clock.
+- **React Hot Toast**: For showing toast notifications.
+- **Tailwind CSS**: Utility-first CSS framework for styling the app.
+- **TypeScript**: Adds static type checking to JavaScript.
 
-- Configure the top-level `parserOptions` property like this:
+## How It Works
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **User Flow**:
+   - Users can select a bus to view the available seats.
+   - Users can click on seats to book them.
+   - Once a seat is selected, users will see a form to fill in details like name, destination, and time.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Admin Panel**:
+   - Admins can view all buses and their booking status.
+   - Admins can select a bus to view detailed seat information and bookings.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. **Seat Layout**:
+   - The seat layout displays seat IDs, with booked seats visually differentiated.
+   - Admins can see which seats are booked and click on a seat to view passenger details.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Prerequisites
+
+Before running the app, make sure you have the following installed:
+- **Node.js**: [Download here](https://nodejs.org/)
+- **npm**: Comes with Node.js (use `npm -v` to check)
+
+## Installation
+
+Follow these steps to set up the app on your local machine:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/selise-transport.g
+cd selise-transport
+npm run dev
+
+
